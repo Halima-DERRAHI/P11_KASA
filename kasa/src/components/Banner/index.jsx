@@ -1,12 +1,12 @@
 import styles from './Banner.module.css';
 
-function Banner() {
+function Banner({ image, text, altText }) {
     return (
         <div className={styles.banner}>
             <div className={styles.container}>
-                <img src='./assets/home-banner.jpg' alt='Home' className={styles.image} />
+                <img src={image} alt={altText} className={styles.image} />
             </div>
-            <h1 className={styles.title}>Chez vous, partout et ailleurs</h1>
+            <h1 className={styles.title}>{text}</h1>
         </div>
     )
 }
