@@ -10,11 +10,10 @@ function Home() {
   const altText = "Home banner";
 
   return (
-    <div>
+    <main>
       <section>
         <Banner image={bannerImage} text={bannerText} altText={altText} />
       </section>
-
       <div className={styles.gallery}>
         {data.map((logement)=> (
           <Card 
@@ -25,7 +24,7 @@ function Home() {
           />
         ))}
       </div>
-    </div>
+    </main>
   )
 }
 

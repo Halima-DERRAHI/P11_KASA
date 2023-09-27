@@ -1,9 +1,10 @@
 .gallery {
-    margin: 25px 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: #F6F6F6; 
     border-radius: 25px;
-    padding: 3%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(0 , 340px));
-    gap: 3rem;
+    margin: 40px 5%;
+    padding: 20px;
 }
