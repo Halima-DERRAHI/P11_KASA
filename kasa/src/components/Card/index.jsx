@@ -1,11 +1,13 @@
 //import { Link } from 'react-router-dom'
-//import styles from './Card.module.css'
+import styles from './Card.module.css'
 
-function Card({title , cover}) {
+function Card({ id, title, cover }) {
     return (
-        <article>
-            <img src={cover} alt={title}/>
-            <h2>{title}</h2>
+        <article className={styles.card}>
+            <div className={styles.cardImage}>
+                <img src={cover} alt={title} className={styles.image} />
+            </div>
+            <h2 className={styles.title}>{title}</h2>
         </article>
     )
 }

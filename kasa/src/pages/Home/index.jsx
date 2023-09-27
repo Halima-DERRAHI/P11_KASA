@@ -14,9 +14,12 @@ function Home() {
       <section>
         <Banner image={bannerImage} text={bannerText} altText={altText} />
       </section>
+
       <div className={styles.gallery}>
         {data.map((logement)=> (
           <Card 
+            key={logement.id}
+            id={logement.id}
             title={logement.title}
             cover={logement.cover}
           />

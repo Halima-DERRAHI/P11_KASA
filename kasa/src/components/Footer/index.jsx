@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
 
 function Footer() {
+    const currentYear = (new Date()).getFullYear()
     return (
         <footer className={styles.footer}>
             <div>
@@ -9,7 +10,7 @@ function Footer() {
                     <img src='/assets/logo-footer.svg' alt='Logo kasa'/>
                 </Link>
             </div>
-            <p className={styles.copyright}>© 2020 Kasa. All rights reserved</p>
+            <p className={styles.copyright}>© {currentYear} Kasa. All rights reserved</p>
         </footer>
     )
 }
