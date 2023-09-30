@@ -1,15 +1,14 @@
 .card {
-    width: 33%;
     position: relative;
     border-radius: 10px;
-    margin: 2rem 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .cardImage {
     height: 340px;
-    max-width: 340px;
     position: relative;
     border-radius: 10px;
 }

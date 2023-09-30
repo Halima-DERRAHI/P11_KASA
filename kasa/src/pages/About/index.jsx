@@ -1,5 +1,8 @@
 import Banner from '../../components/Banner'
 import styles from './About.module.css'
+import data from '../../Datas/collapse-about.json'
+import Collapse from '../../components/Collapse';
+
 function About() {
 
     const bannerImage = './assets/about-banner.jpg';
@@ -7,14 +10,20 @@ function About() {
     const altText = "About banner";
 
     return (
-        <div>
-            <section >
+        <main>
+            <section className={styles.main}>
                 <Banner image={bannerImage} text={bannerText} altText={altText} />
             </section>
-            <div className={styles.gallery}>
-
-            </div>
-        </div>
+            <section className={styles.section}>
+                {data.map((about)=> (
+                    <Collapse
+                        key={about.title} 
+                        title={about.title}
+                        text={about.text}
+                    />
+                ))}
+            </section>
+        </main>
     )
 }
 
