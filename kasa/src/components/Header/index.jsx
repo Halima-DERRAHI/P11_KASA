@@ -6,7 +6,7 @@ function Header() {
         <header className={styles.header}>
              <div>
                 <Link to='/'>
-                    <img src='/assets/logo-header.svg' alt='Logo kasa'/>
+                    <img src='/assets/logo-header.svg' alt='Logo kasa' className={styles.logo} />
                 </Link>
             </div>
             <nav>

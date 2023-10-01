@@ -28,17 +28,43 @@
     border-radius: 25px;
 }
 
-.title {
+.titleContainer {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     font-size: 48px; 
     color: white; 
-    text-align: center;
     font-weight: 500; 
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: 111px;
+    }
+
+    .container::after {
+        border-radius: 10px;
+    }
+
+    .image {
+        border-radius: 10px;
+    }
+  
+    .title {
+        font-size: 24px;
+        justify-content:flex-start;
+        width: 90%;
+        font-weight: 400; 
+    }
 }

@@ -13,15 +13,16 @@
     justify-content: space-between;
     flex-direction: column;
     margin: 15px 0;
+    min-width: 175px;
 }
 
-.title{
+.title {
     color: #FF6060;
     font-size:36px;
     font-weight: 500;
     line-height: 50px;
 }
-.location{
+.location {
     color: #FF6060;
     font-size:18px;
     font-weight: 500;
@@ -33,7 +34,7 @@
     display:flex;
     justify-content: flex-end;
 }
-.name{
+.name {
     display:flex;
     flex-direction: column;
     color: #FF6060;
@@ -43,13 +44,13 @@
     text-align: right;
     padding-right:10px;
 }
-.photo{
+.photo {
     width: 64px;
     height: 64px;
     border-radius: 50%;
 }
 
-.TagsContainer{
+.tagsContainer{
     display: flex;
 }
 
@@ -60,8 +61,24 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .containterInfos {
+        flex-direction: column;
+    }
+    .containerProfileRating {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
     .containerDescriptions {
       grid-template-columns: 1fr; 
+    }
+    .tagsContainer {
+        flex-wrap: wrap;
+    }
+    .title {
+        font-size: 18px;
+    }
+    .location {
+        font-size: 14px;
     }
 }

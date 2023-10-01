@@ -14,7 +14,7 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    top: 50%;
+    top: 45%;
     width: 100%;
     padding: 0 20px;
 }
@@ -23,19 +23,23 @@
     color: white;
     width: 40px;
     height: 70px;
-    opacity: 0.9;
+    opacity: 0.6;
     overflow: visible;
     cursor: pointer;
 }
 
+.arrow:hover{
+    opacity: 1;
+}
+
 .slideshowCounter {
     position: absolute;
-    bottom: -180%;
+    bottom: -220%;
     left: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     width: 50px;
     height: 30px;
     margin-bottom: 10px;
@@ -46,4 +50,17 @@
     font-size: 18px;
     font-weight: 600;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .housingImg {
+        height: 255px;
+    }
+    .arrow {
+        width: 24px;
+        height: 24px;
+    }
+    .slideshowCounter {
+        display: none;
+    }
 }

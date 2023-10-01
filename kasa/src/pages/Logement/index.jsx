@@ -11,7 +11,7 @@ function Logement() {
 
     const { id } = useParams(); 
     const logementData = ItemsData.find((item) => item.id === id);
-    
+    //const navigate = useNavigate();
     const { pictures, rating, tags, description, equipments, title, location, host} = logementData;
     const [firstName, lastName] = host.name.split(' ');
 
@@ -28,7 +28,7 @@ function Logement() {
                         <h2 className={styles.location}>{location}</h2>
                     </div>
 
-                    <div className={styles.TagsContainer}>
+                    <div className={styles.tagsContainer}>
                         {tags.map((tag,index)=> (
                             <Tag
                                 key={index}

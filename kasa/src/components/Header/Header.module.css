@@ -36,3 +36,13 @@ header {
 .about:hover::after {
     transform: scaleX(1);
 }
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 145px;
+    }
+
+    .home, .about {
+        font-size: 12px;
+    }
+}
