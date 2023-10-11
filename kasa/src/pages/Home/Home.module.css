@@ -6,6 +6,7 @@
     border-radius: 25px;
     margin: 40px 5%;
     padding: 50px;
+    margin-bottom: 250px;
 }
 
 @media screen and (max-width: 840px) {
