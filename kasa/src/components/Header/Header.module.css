@@ -1,9 +1,13 @@
 header {
+    margin: auto;
+    max-width: 1400px;
+}
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 68px;
-    margin: 3% 5%;
+    margin: 40px 3%;
 }
 
 .nav{

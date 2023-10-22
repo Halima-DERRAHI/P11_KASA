@@ -7,9 +7,10 @@ import ItemsData from '../../Datas/logements.json';
 import styles from './Logement.module.css'
 
 function Logement() {
-    
+
     const { id } = useParams(); 
     const logementData = ItemsData.find((item) => item.id === id);
+    
     if (logementData === undefined) {
         return <Navigate to="/ErrorPage" />;
     }
