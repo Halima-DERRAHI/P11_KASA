@@ -1,4 +1,4 @@
-import { useParams , Navigate } from 'react-router-dom';
+import { useParams , useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse';
 import Rating from '../../components/Rating';
 import Slideshow from '../../components/Slideshow';
@@ -9,10 +9,12 @@ import styles from './Logement.module.css'
 function Logement() {
 
     const { id } = useParams(); 
+    const navigate = useNavigate();
     const logementData = ItemsData.find((item) => item.id === id);
     
     if (logementData === undefined) {
-        return <Navigate to="/ErrorPage" />;
+        navigate('/ErrorPage');
+        return null;
     }
 
     const { pictures, rating, tags, description, equipments, title, location, host} = logementData;
