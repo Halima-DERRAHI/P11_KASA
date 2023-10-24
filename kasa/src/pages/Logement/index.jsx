@@ -12,7 +12,7 @@ function Logement() {
     const navigate = useNavigate();
     const logementData = ItemsData.find((item) => item.id === id);
     
-    if (logementData === undefined) {
+    if (!logementData) {
         navigate('/ErrorPage');
         return null;
     }
