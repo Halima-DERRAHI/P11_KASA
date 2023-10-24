@@ -1,4 +1,5 @@
 import { useParams , useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import Collapse from '../../components/Collapse';
 import Rating from '../../components/Rating';
 import Slideshow from '../../components/Slideshow';
@@ -12,8 +13,13 @@ function Logement() {
     const navigate = useNavigate();
     const logementData = ItemsData.find((item) => item.id === id);
     
+    useEffect(() => {
+        if (!logementData) {
+            navigate('/ErrorPage');
+        }
+    }, [logementData, navigate]);
+
     if (!logementData) {
-        navigate('/ErrorPage');
         return null;
     }
 

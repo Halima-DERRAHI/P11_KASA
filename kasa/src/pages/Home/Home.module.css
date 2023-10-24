@@ -11,12 +11,12 @@ main {
     border-radius: 25px;
     margin: 40px 3%;
     padding: 50px;
-    margin-bottom: 250px;
 }
 
 @media screen and (max-width: 840px) {
     .gallery {
         background-color: white;
         padding: 0px;
+        margin-bottom: 250px;
     }
 }
